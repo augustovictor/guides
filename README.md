@@ -13,7 +13,7 @@
 - [Carta de correção](#correcao)
 
 <hr>
-### Links importantes <a name="links"></a>
+### <a name="links"></a> Links importantes
 
 - [Localização pmjp](https://www.google.com.br/maps/place/Centro+Administrativo+Municipal+de+Jo%C3%A3o+Pessoa/@-7.1688217,-34.8639092,15z/data=!4m5!3m4!1s0x0:0x1ff176c6311bebc0!8m2!3d-7.1688217!4d-34.8639092);
 - [Comprovante de mei](http://www.portaldoempreendedor.gov.br/mei-microempreendedor-individual/ccmei)
@@ -23,14 +23,14 @@
 
 <hr>
 
-### Local <a name="local"></a>
+### <a name="local"></a>Local
 Para solicitar a autorização para emissão de notas fiscais eletrônicas de serviço você deve ir à [pmjp](https://www.google.com.br/maps/place/Centro+Administrativo+Municipal+de+Jo%C3%A3o+Pessoa/@-7.1688217,-34.8639092,15z/data=!4m5!3m4!1s0x0:0x1ff176c6311bebc0!8m2!3d-7.1688217!4d-34.8639092);
 
 O telefone de contato para dúvidas é: `(83) 3218-9413`;
 
 <hr> 
 
-### Documentos <a name="docs"></a>
+### <a name="docs"></a>Documentos
 Lá esperei mais ou menos uns 10 min pra ser atendido e uns 10 no atendimento.
 Segue o passo a passo:
 
@@ -46,7 +46,7 @@ Segue o passo a passo:
 
 <hr>
 
-### O cadastro <a name="cadastro"></a>
+### <a name="cadastro"></a>O cadastro
 
 No meu caso o sistema estava fora do ar, então é bom ligar antes e perguntar se o sistema ta ok. (Número: 3218-9413). Mas mesmo assim efetuei o cadastro.
 Então o acompanhamento do processo é através do link:
@@ -70,7 +70,7 @@ Então o acompanhamento do processo é através do link:
 
 <hr>
 
-### Carta de correção de NFS-E <a name="correcao"></a>
+### <a name="correcao"></a>Carta de correção de NFS-E
 
 Caso você tenha emitido alguma nota com informação errada, seguir os passos a seguir para correção:
 
