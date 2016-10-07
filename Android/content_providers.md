@@ -14,7 +14,7 @@
 	- Functions
 	- Cursor
 -  [Implementando um Content Provider](#implementing)
-	-  Contract
+	1.  Contract
 	-  Database Helper
 	-  Provider
 	-  CursorAdapter
