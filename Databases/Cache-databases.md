@@ -14,7 +14,7 @@
 3. [Bancos](#bancos)
 4. [Referências](#referencias)
 
-## <a href="o_que_considerar">1. O que considerar ao escolher um banco</a>
+## <a name="o_que_considerar">1. O que considerar ao escolher um banco</a>
 
 - Eviction policies (Políticas de despejo);
 - Max size limit
@@ -22,9 +22,9 @@
 - Weak references keys
 - Statistics
 
-## <a href="conceitos_importantes">2. Conceitos importantes</a>
+## <a name="conceitos_importantes">2. Conceitos importantes</a>
 
-### <a href="tec_armazenamento">2.1 Técnicas de armazenamento</a>
+### <a name="tec_armazenamento">2.1 Técnicas de armazenamento</a>
 #### Upfront population
 O cache é populado com todos os dados necessários no início da execução.
 Esta abordagem requer que todos os dados a serem armazenados já sejam conhecidos.
@@ -51,7 +51,7 @@ Não há uma linearidade no delay de leitura, já que na primeira vez o dado sem
 
 <hr>
 
-### <a href="res_queries">2.2 Armazenamento de reultados de queries</a>
+### <a name="res_queries">2.2 Armazenamento de reultados de queries</a>
 - Não se deve escolher o armazenamento em cache simplesmente por conta de as queries serem muito lentas. Este na verdade deve ser p último recurso. A otimização deve começar no lado do DB (Verificando a estratégia de fetching e não utilizando queries N+1). Quando esta etapa for finalizada, verifique se todos os índices estão corretos. Estes devem caber na memória RAM, caso contrário a infrá irá começar a aumentar muito.
 
 	- Queries N+1 são nested loops que funcionam como duas queries em execução. A query de fora busca os resultados em uma tabela e a query de dentro busca, para cada linha, o dado correspondente em outra tabela.
@@ -62,7 +62,7 @@ Não há uma linearidade no delay de leitura, já que na primeira vez o dado sem
 
 <hr>
 
-### <a href="sincronismo">2.3 Sincronismo</a>
+### <a name="sincronismo">2.3 Sincronismo</a>
 #### Abordagens:
 ##### Write-through caching
 - É um cache que permite leitura e escrita nele.
@@ -92,7 +92,7 @@ Não há uma linearidade no delay de leitura, já que na primeira vez o dado sem
 
 <hr>
 
-### <a href="cache_size">2.4 Cache Size</a>
+### <a name="cache_size">2.4 Cache Size</a>
 #### Abordagens para controlar o despejo dos dados e liberação de espaço:
 
 ##### Time based eviction
@@ -127,17 +127,17 @@ Não há uma linearidade no delay de leitura, já que na primeira vez o dado sem
 
 <hr>
 
-### <a href="server_cluster">2.5 Caching in Server clusters</a>
+### <a name="server_cluster">2.5 Caching in Server clusters</a>
 - Se for usada a abordagem write-through, apenas o server que executa a escrita terá conhecimento sobre o dado.
 - São recomendadas as abordagens time based expiration e active expiration para que o sincronismo seja garantido.
 
-## <a href="bancos">3. Bancos</a>
+## <a name="bancos">3. Bancos</a>
 
 - Memcached
 - Redis
 
 
-## <a href="referencias">4. Referências</a>
+## <a name="referencias">4. Referências</a>
 
 - https://dzone.com/articles/caching-best-practices
 - http://tutorials.jenkov.com/software-architecture/caching-techniques.html
