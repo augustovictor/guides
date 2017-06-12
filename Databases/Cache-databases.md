@@ -1,7 +1,7 @@
 # Cache databases
 <hr>
 
-**Objetivo:** O armazenamento em cache é utilizado para acelerar o processo de leitura de dados ao invés de buscá-lo em sua origem.
+**Objetivo: ** O armazenamento em cache é utilizado para acelerar o processo de leitura de dados ao invés de busca-lo em sua origem.
 
 ## Sumário
 1. [O que considerar ao escolher um banco](#o_que_considerar)
@@ -13,6 +13,7 @@
 	- [Caching in Server clusters](#server_cluster)
 1. [Bancos](#bancos)
 1. [Diferenças](#diferencas)
+1. [Operações Redis](#operacoes_redis)
 1. [Referências](#referencias)
 
 ## <a name="o_que_considerar">1. O que considerar ao escolher um banco</a>
@@ -148,8 +149,65 @@ Não há uma linearidade no delay de leitura, já que na primeira vez o dado sem
 - Redis suporta pub/sup enquanto que o Memcached não;
 - Memcached perde os dados quando o server é reiniciado, já que os dados são armazenados em memória apenas. Enquanto que o Redis, por padrão, persiste os dados em disco, mas também oferece a possibilidade de não faze-lo.
 
+## <a name="operacoes_redis">5. Operações Redis</a>
 
-## <a name="referencias">5. Referências</a>
+#### Comandos básicos
+- `INCR` - Operação atômica para incrementar um valor. Não há problemas de consistência. Incrementa `age` em 1. Caso a chave não exista, é criada;
+	- Ex: `INCR age` 
+- `EXPIRE` - Expira a chave em X segundos;
+	- Ex: `EXPIRE age 10` - expira a chave `age` em 10s;
+	- Retorno `-2`: A chave não existe mais;
+	- Retorno `-1`: A chave não expira;
+- `TTL` - Retorna o `time to live` da chave em segundos;
+	- Ex: `TTL age`
+	- Quando o valor de uma chave é alterado, o `TTL` dela é resetado para -1, que é o padrão;
+
+#### Listas
+- `RPUSH` - Adiciona um valor ao final da lista;
+	-Ex: `RPUSH friends 'victor'`
+- `LPUSH` - Adiciona um valor no início da lista;
+- `LRANGE` - Retorna um subset da lista. O primeiro argumento é o primeiro item e o segundo é o último;
+	- Ex:  `LRANGE friends 0 -1` - Rorna todos os itens da lista;
+	- `-1` Indica que devem ser retornados elementos até o fim da lista;
+- `LLEN` - Retorna o tamanho da lista
+- `LPOP` - Remove o primeiro item da lista
+- `RPOP` - Remove o último item da lista
+
+#### Sets
+- `SAAD` - Adiciona um valor ao set;
+	- Ex: `SADD powers 'flight'`
+- `SREM` - Remove um valor do set;
+	- Ex: `SREM powers 'flight'`
+- `SISMEMBER` - Testa se dado valor faz parte do set. `1` caso seja e `0` caso não seja.
+	- Ex: `SISMEMBER powers 'flight'`
+- `SMEMBERS` - Lista os elementos em um set
+- `SUNION` - Une dois sets e retorna um só. Não altera os `sets`.
+	- Ex: `SUNION powers subpowers`
+
+#### Sorted sets
+Na versão 1.2 do Redis foi adicionado o tipo `sorted set`, onde cada valor tem um score associado a ele. E é este score que será utilizado para ordenar o `set`.
+- `ZADD` - Adiciona um valor ao set
+	- Ex: `ZADD hackers 1940 'Alan Kay'` `ZADD hackers 1906 'Grace Hopper'` `ZADD hackers 1953 'Richard Stallman'`
+- `ZRANGE` - Retorna os valores em ordem crescente;
+	- Ex: `ZRANGE hackers 0 -1`
+
+#### [Hashes](https://redis.io/commands#hash)
+São mapas de chave-valor. Este é o tipo de dado ideal para representar um objeto
+Exemplo:
+```
+HSET user:1000 name 'Victor Augusto'
+HSET user:1000 email 'findme@augustovictor.com.br'
+HSET user:1000 password 'pass123'
+
+OU
+
+HMSET user:1000 name 'Victor Augusto' email 'findme@augustovictor.com.br' password 'pass123'
+```
+- `HGETALL` - Traz todos os dados de um hash;
+- `HGET` - Traz o valor de uma propriedade
+	- Ex: `HGET user:1000 name`
+
+## <a name="referencias">6. Referências</a>
 
 - https://dzone.com/articles/caching-best-practices
 - http://tutorials.jenkov.com/software-architecture/caching-techniques.html
