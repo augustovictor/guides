@@ -12,6 +12,7 @@
 	- [Cache size](#cache_size)
 	- [Caching in Server clusters](#server_cluster)
 1. [Bancos](#bancos)
+1. [Diferenças](#diferencas)
 1. [Referências](#referencias)
 
 ## <a name="o_que_considerar">1. O que considerar ao escolher um banco</a>
@@ -136,8 +137,19 @@ Não há uma linearidade no delay de leitura, já que na primeira vez o dado sem
 - Memcached
 - Redis
 
+## <a name="diferencas">4. Diferenças</a>
 
-## <a name="referencias">4. Referências</a>
+- Redis é maior, mais poopular e tem maior suporte do que Memcached.
+- O Memcached pode fazer apenas uma parte do que o Redis faz.
+- O Memcached ocupa o espaço total definido para seu uso em RAM. Independente de estar sem nenhum registro nele. Enquanto que o Redis irá utilizar apenas o necessário, e a definição de um tamanho máximo é opcional.
+- O espaço ocupado por registros em ambos é similar.
+- O Redis possui por default a possibilidade de fazer dump dedados por ferramentas de terceiros. O Memcached não oferece essa possibilidade.
+- Redis oferece ferramentas para auxiliar na sua escalabilidade ([Redis cluster](https://redis.io/topics/cluster-tutorial) e [Redis sentinel](https://redis.io/topics/sentinel)) enquanto que o Memcached não.
+- Redis suporta pub/sup enquanto que o Memcached não;
+- Memcached perde os dados quando o server é reiniciado, já que os dados são armazenados em memória apenas. Enquanto que o Redis, por padrão, persiste os dados em disco, mas também oferece a possibilidade de não faze-lo.
+
+
+## <a name="referencias">5. Referências</a>
 
 - https://dzone.com/articles/caching-best-practices
 - http://tutorials.jenkov.com/software-architecture/caching-techniques.html
