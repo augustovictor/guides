@@ -1,7 +1,7 @@
 # Cache databases
 <hr>
 
-**Objetivo: ** O armazenamento em cache é utilizado para acelerar o processo de leitura de dados ao invés de busca-lo em sua origem.
+**Objetivo:** O armazenamento em cache é utilizado para acelerar o processo de leitura de dados ao invés de buscá-lo em sua origem.
 
 ## Sumário
 1. [O que considerar ao escolher um banco](#o_que_considerar)
