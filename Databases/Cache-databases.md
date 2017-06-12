@@ -5,14 +5,14 @@
 
 ## Sumário
 1. [O que considerar ao escolher um banco](#o_que_considerar)
-2. [Conceitos importantes](#conceitos_importantes)
-	2.1. [Técnicas de armazenamento](#tec_armazenamento)
-	2.2. [Armazenamento de resultados de queries](#res_queries)
-	2.3. [Sincronismo](#sincronismo)
-	2.4. [Cache size](#cache_size)
-	2.5. [Caching in Server clusters](#server_cluster)
-3. [Bancos](#bancos)
-4. [Referências](#referencias)
+1. [Conceitos importantes](#conceitos_importantes)
+	- [Técnicas de armazenamento](#tec_armazenamento)
+	- [Armazenamento de resultados de queries](#res_queries)
+	- [Sincronismo](#sincronismo)
+	- [Cache size](#cache_size)
+	- [Caching in Server clusters](#server_cluster)
+1. [Bancos](#bancos)
+1. [Referências](#referencias)
 
 ## <a name="o_que_considerar">1. O que considerar ao escolher um banco</a>
 
