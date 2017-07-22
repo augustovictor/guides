@@ -2,16 +2,17 @@
 
 <hr>
 
-**<i>Última atualização: 07 de outubro de 2016</i>**
+**<i>Última atualização: 10 de outubro de 2016</i>**
 
 ## Índice
 
 1. [O que é um Content Provider](#definition)
 - [Por que usar um Content Provider](#why_use)
 - [Como Content Providers funcionam](#how_they_work)
-	1. ContentResolver
-	- Uri
-	- Functions
+	1. Uri
+	- ContentProvider
+	- ContentResolver
+	- Funções
 	- Cursor
 -  [Implementando um Content Provider](#implementing)
 	1.  Contract
@@ -42,7 +43,7 @@ Conforme mudamos de uma **AsyncTask** para **SyncAdapters** e **CursorLoaders**,
 
 ## <a name="how_they_work"></a> 3. Como Content Providers funcionam
 
-### 3.1 Content Resolver
+### 3.1 Uri
 
 URI significa Uniform Resource Identifier. 
 
@@ -52,17 +53,19 @@ A URI pode identificar e/ou localizar dados. Normalmente eles seguem a seguinte 
 Exemplo de uma **URI** usada pra retornar uma lista de palavras do **contentProvider** do dicionário de um usuário:
 `content://user_dictionary/words`
 
-### 3.2 Uri
+### 3.2 ContentProvider
 
 Um **contentProvider** é um middleman entre a aplicação e o database. 
 
 A aplicação acessa o **contentProvider** para ler ou armazenar dados. Este feito graças ao **ContentResolver**. Há vários ContentProviders nos aparelhos Android (contentProvider do alarme, calendário, e muitos outros). 
 
+### 3.3 ContentResolver
+
 A comunicação entre as aplicações e um **contentProvider** é gerenciada por um **ContentResolver**. 
 
 O **ContentResolver** procura por um **ContentProvider** na requisição feita pela sua aplicação, então verifica por qual **ContentProvider** sua aplicação está procurando. Este processamento é feito através de um **URI**;
 
-### 3.3 Functions
+### 3.4 Funções
 
 Após conseguir acesso ao **ContentResolver**, podemos realizar chamadas no **ContentProvider** (update, delete, query, insert e bulkInsert).
 
@@ -74,7 +77,6 @@ Após conseguir acesso ao **ContentResolver**, podemos realizar chamadas no **Co
 |`delete(...)`|int|Quantas linhas foram removidas|
 |`query(...)`|Cursor|Nos permite iterar sobre as linhas de dados retornadas|
 
-
 Antes de avançarmos vamos ver o que acontece quando chamamos estas funções.
 
 - Primeiro chamamos o **ContentResolver** para encontrar um ContentProvider. 
@@ -85,7 +87,7 @@ Uma vez que temos o provider, chamamos nele uma das funções listadas acima. O 
 
 O database retorna o valor apropriado para o **ContentProvider**, que então passa para o **ContentResolver** e finalmente para a aplicação.
 
-### 3.4 Cursor
+### 3.5 Cursor
 
 Um **Cursor** é um iterator. Isso nos dá acesso aos dados de forma tabular. 
 
@@ -97,6 +99,8 @@ As operações que podemos executar no nosso cursor incluem:
 - E mais...
 
 Há muitas operações que podem ser executadas sobre um cursor, e elas podem ser verificadas na documentação do Android.
+
+Abaixo temos um exemplo visual de um cursor que foi obtido acessando um database.
 
 |_ID|version_name|description|icon|
 |---|------------|-----------|----|
