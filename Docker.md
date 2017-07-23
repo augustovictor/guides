@@ -4,9 +4,11 @@
 - **Image**: The application we want to run
 	- The app binaries and dependencies;
 	- Metadata about the image data and how to run it;
+	- Structure: `user/repository`
 - **Image layers**: 
 - **Container**: Instance of that image running as a process
 - **Image registry**: Images repository. E.g., dockerHub
+- **Dockerfile**: Recipe to create an image;
 
 ## Commands
 Command | Description
@@ -39,6 +41,12 @@ Command | Description
 `docker container run --rm --net net_test alpine nslookup search` | Lookup for servers under an alias
 `docker container run --rm --net net_test centos curl -s search:9200` | Request from centos to the servers running under the alias search on port 9200
 `docker history mysql` | History of changes to `mysql` image in dockerhub
+`docker image tag nginx victor/nginx[:TAG]` | Renamge `nginx` TAG to `victor/nginx`
+`docker image push victor/nginx` | Uploads changed layers to an image registry (dockerhub is default)
+`docker login` | Login
+`docker logout` | Logout (Do it to delete the stored keychain)
+`docker image build -t customName .` | Build image from Docker file with a custom name in the current dir
+
 
 
 ## Observations
@@ -47,6 +55,7 @@ Command | Description
 - When listing networks: `docker0` == `bridge`(default);
 - When creating a network the `bridge` is the defautlt driver used;
 - DNS Round Robin test: More than one server responding to the same DNS.
+- Rename image to `user/image_name` before pushing to dockerhub;
 
 ## Best practices
 - Create a virtual network for each app without needing to use `-p`:
