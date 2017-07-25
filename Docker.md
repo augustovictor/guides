@@ -1,11 +1,12 @@
 # Docker
 
 ## Glossary
+- **Blue/green deploy**: Zero downtime deploy;
 - **Image**: The application we want to run
 	- The app binaries and dependencies;
 	- Metadata about the image data and how to run it;
 	- Structure: `user/repository`
-- **Image layers**: 
+- **Image layers**: .
 - **Container**: Instance of that image running as a process
 	- **Immutable**: The infrastructur does not change! If any change has to be made then a whole new container should be deployed.
 	- **Ephemeral**:
@@ -16,6 +17,15 @@
 - **Docker compose**: Combination of the command line tool and a configuration file;
 	- **YAML** file: Specification of the containers that we need to run, network, volumes, env variables, images, etc;
 	- **CLI tool** `docker-compose`: Local dev and test automation with **YAML** files;
+- **Docker swarm**: Orchestration
+	- Scale out: Multiple hosts/nodes/instances/OSs. E.g., 3 node swarm;
+	- Swarm mode: Clustering solution built inside docker;
+	- Services: Process responsible for triggering tasks;
+	- Tasks: Process responsible for running containers;
+	- Services replicas column: How many are actually running / How many were specified to run; E.g., **1/1**
+	- Raft: Protocol that ensures consistency across multiple nodes;
+	- Manager: The manager node with a raft database that stores the configuration they need to be an authority;
+	- Worker: Receive orders from the managers;
 
 ## Commands
 Command | Description
@@ -59,10 +69,22 @@ Command | Description
 `docker volume prune` | Clean unused volumes
 `docker container run -d --name webhost -p 80:80 -v $(pwd):/usr/src/app node` | Link current directory with container files
 `docker-compose up [--build]` | Setup volumes/networks and start all containers
-`docker-compose down [-v][--rmi [local|all]]` | Stop all containers and remove cont/vol/net/image
+`docker-compose down [-v][--rmi [local, all]]` | Stop all containers and remove cont/vol/net/image
 `docker-compose ps` | List running containers
 `docker-compose build` | Rebuild in case anything changed in an image
-
+`docker swarm init ` | Activate `docker swarm` which is inactive by default
+`docker node ls` | List of the snodes created by `swarm`
+`dockre service create alpine ping 8.8.8.8` | Creates a service with alpine and pings google
+`docker service ls` | List running services. '*' means the current node.
+`docker service ps <service_name>` | List the containers running in a service
+`docker service update <service_name OR id> --replicas 3` | Updates the service so it has 3 replicas;
+`docker service rm <service_name>` | Remove a service and its containers;
+`docker-machine create <node_name>` | Creates a virtual machine with busyBox (Light weight linux distro)
+`docker-machine ssh <node_name>` | Access the virtual machine
+`docker-machine env <node_name>` | Outputs info about the machine. Copy the `env` command to operate under the created machine
+`docker-machine swarm init --advertise-addr 192.168.99.100` | Activate swarm in an address accessible from other servers.
+`docker swarm join-token [manager OR worker]` | Display the token to create a worker/manager;
+`docker node update --role manager <node_name>` | Make a node reachable
 
 
 ## Observations
@@ -73,6 +95,10 @@ Command | Description
 - DNS Round Robin test: More than one server responding to the same DNS.
 - Rename image to `user/image_name` before pushing to dockerhub;
 - Volumes need a manual deletion.
+- A container running by a service automatically recovers from failure;
+- To remove the containers in a service, the service has to be removed;
+- When created a docker-machine and activate the swarm we need to specify an accessible address from other machines;
+- To make a node reachable
 
 ## Best practices
 - Create a virtual network for each app without needing to use `-p`:
