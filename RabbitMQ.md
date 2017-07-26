@@ -100,3 +100,8 @@ Might not exist at first. So the messages will keep stored in the broker until a
 
 ### Remote Procedure Call
 Pattern to remotely execute functions and wait for their result;
+Most used AMQP properties (out of 14):
+- persistent: Persist in disk or not;
+- content_type: Describe mime-type of the encoding. `application/json`, `text/plain`,  etc;
+- reply_to: Used to name a callback queue;
+- correlation_id: Useful to correlate RPC responses with requests;
