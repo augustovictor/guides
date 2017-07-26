@@ -1,6 +1,44 @@
 # RabbitMQ
 Based on the **A**dvanced **M**essaging and **Q**ueuing **P**rotocol that allows client side applications to communicate to compatible messaging systems;
 
+Microservices deployment flow:
+- Commit changes;
+- Compile code;
+- Static code analysis;
+- Execute tests;
+- Packaging;
+- Deploy to environment;
+	- Normally testing env. Then promote it to production;
+
+Communication types:
+- Request/Response
+- Event based
+
+Uses for Message Queueing:
+- **Decoupling**
+- **Redundancy**
+- **Scalability**
+	- **X axis scalling (Horizontal duplication)**: Multiple instances of an app under a load balancer;
+	- **Y axis scalling (Functional decomposition)**: Application decomposed in multiple services;
+	- **Z axis scalling (Data partitioning)**: Commonly used to scale databases. Each server runs an identical copy of the code. Similar to x-axis but each server is responsible for a subset of the data; Some components in the system is responsible for redirecting each request to the appropriate server;
+		- A common criteria for forwarding requests is the attributes of the request.Such as the primary key. And also the customer type.
+- **Resiliency**
+- **Delivery guarangees**
+- **Ordering guarantees**
+- **Buffering**
+- **Asynchronous communication**
+
+Desired properties:
+- **Durability**: Messages stored somewhere;
+- **Security policies**: Which apps should have access to these messages;
+- **Message purging**: Queues and/or messages with TTL;
+- **Message filtering**: Subscribers only see messages matching a specific criteria;
+- **Delivery policies**: Messages delivered at least once or no more than once;
+- **Routing policies**: In a system with many queue servers, what servers receive a message;
+- **Batching policies**: If messages should be delivered immediately and if many messages should be delivered at once;
+- **Queueing criteria**: When a message should be considered in a queue or has been forwarded to all queues;
+- **Receipt notification**: When a publisher knows when a subscriber or all subscribers have received the message;
+
 ## Flow
 Message Broker that receives messages from a publisher and forward to consumer.
 They don't have to be in the same server.
@@ -42,11 +80,17 @@ Manage queues;
 Stores the messages inside queues.
 Attributes:
 - Name: Queue name;
-- Durable: Persist the queue to disk;
+- Durable: Persist the queue to disk; (Does not persist the messages); Brings extra overhead
 - Exclusive: Delete when not needed;
 - Auto delete: Deleted when consumer unsibscribes;
-- Durability: If a message will survive a broker restart.
-	- Durable: Yes | Transient: No
+
+### Work queues
+Aka Task Queues to avoid doing a resource-intensive task immediately and having to wait for it to complete.
+
+### Bindings
+The connection between an exchange and a queue; We can read the method `ch.bindExchange(q.queue, exName, '')` as This queue is interested in messages from this exchange;
+Attributes:
+- RoutingKey
 
 ### Message broker
 Group of exchanges and queues;
@@ -54,3 +98,5 @@ Group of exchanges and queues;
 ### Consumer
 Might not exist at first. So the messages will keep stored in the broker until a consumer starts dequeuing them;
 
+### Remote Procedure Call
+Pattern to remotely execute functions and wait for their result;
