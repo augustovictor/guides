@@ -118,16 +118,18 @@ Used to distribute time-consuming tasks among multiple workers;
 Each task is delivered to exactly one worker.
 Works by default in Round-robin dispatching.
 
-
-## Observations
-- To avoid queues and messages to be lost if rabbitMQ dies we need to mark `{ durable: true }` the queue and  `{ persistent: true }` the message;
-	- It is not 100% ensured. [Morei info](https://www.rabbitmq.com/confirms.html);
-- A **producer** never sends a message directly to a queue. Instead, it sends to an **exchange**;
-
-### Remote Procedure Call
+## Remote Procedure Call
 Pattern to remotely execute functions and wait for their result;
+The RPC worker is the server;
 Most used AMQP properties (out of 14):
 - persistent: Persist in disk or not;
 - content_type: Describe mime-type of the encoding. `application/json`, `text/plain`,  etc;
 - reply_to: Used to name a callback queue;
 - correlation_id: Useful to correlate RPC responses with requests;
+
+
+## Observations
+- To avoid queues and messages to be lost if rabbitMQ dies we need to mark `{ durable: true }` the queue and  `{ persistent: true }` the message;
+	- It is not 100% ensured. [Morei info](https://www.rabbitmq.com/confirms.html);
+- A **producer** never sends a message directly to a queue. Instead, it sends to an **exchange**;
+- We have to handle duplicate responses ourselves on client side;
