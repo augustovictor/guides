@@ -36,5 +36,12 @@ Or you can implement it yourself. But keep in mind that it can introduce bugs an
 - [OpenTracing](http://opentracing.io/)
 - [Zipkin](http://zipkin.io/)
 - [Jaeger](http://jaeger.readthedocs.io/en/latest/) (OpenTracing compatible)
-It is a neutral vendor interface for instrumentation.
+It is a neutral vendor interface for instrumentation used to:
+- Monitor transactions spanning many microservices;
+- Measure latency of operations;
+- Root cause analysis with span tags and logs;
+- Contextualized span logs;
+- Baggage propagation;
+- Automatic generation of RPC metrics;
+
 
