@@ -18,11 +18,11 @@ These are visual components used to display info to user and accept input.
 
 ### 1.2 Presentation Logic Components:
 
-The code that defines the logical behavior and structure of the in a way that is independent of any user interface implementation. Also responsible for organizing data from the business layer in consumable format for the UI components. This layer can be subdivided into two categories:
+The code that defines the logical behavior and structure of the application in a way that is independent of any user interface implementation. Also responsible for organizing data from the business layer in consumable format for the UI components. This layer can be subdivided into two categories:
 
 #### 1.2.1. Presenter, Controller, Presentation Model and ViewModel Components
 
-Used when implementing the Separated Presentation pattern, these kinds of components often encapsulate presentation logic within the presentation layer. To maximize reuse opportunities and testability, these components are not specific to any specific UI classes, elements, or controls.
+Used when implementing the Separated Presentation pattern, these components encapsulate presentation logic within the presentation layer. To maximize reuse opportunities and testability, these components are not specific to any specific UI classes, elements, or controls.
 
 
 #### 1.2.2. Presentation Entity Components
