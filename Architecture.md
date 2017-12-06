@@ -1,4 +1,4 @@
-# Software Architectire
+# Software Architecture
 
 ### The three big concerns:
 - Function;
