@@ -26,3 +26,27 @@ Any program can be constructed just from these three structures:
 
 'We prove we are correct by failing to prove incorrectness, despite our best efforts.'
 
+## Expectations of a software architect
+- Analyze technology, industry, and market trends and keep current with those latest trends;
+- ( Core thing ) Analyze the current technology environment and recommend solutions for improvement;
+- Ensure compliance with the architecture
+    - Create checkboxes and stuff so people know what they have to comply with;
+- Have exposure to multiple and diverse technologies, platforms, and environments;
+- Possess exceptional interpersonal skills, including teamwork, facilitation, and negotiation;
+- Define the architecture and design principles to guide technology decisions for the enterprise;
+- Understand the political climate of the enterprise and be able to navigate the politics;
+
+## Architecture aspects
+- Leadership and communication
+- Techinal knowledge
+- Business domain knowledge
+- Methodology and strategy
+
+## Is X an architectural question?
+- To find the answer we have to consider Type X Implementation
+
+## Antipattern
+- Choose technology first and then build the architecture around it;
+
+### Soft Skills
+- 
