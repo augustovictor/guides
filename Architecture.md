@@ -22,22 +22,71 @@
         - Designer
         - Modeling
         - Keep up new techs
-    - Management
-        - Project management
-        - Problem solving
-        - Negotiation
-        - Facilitation
-    - Leadership
-        - Vision
-        - Self directed
-        - Decisive
-        - Motivational
-        - Inspirational
-        - Confident
-        - Committed
-        - Know how to delegate
-        - Be positive and creative
-- What is an architect expected to know?
+        - Architectural concepts
+            - Architectural patterns
+            - Architectural styles
+        - Design patterns
+        - Software engineering
+        - Software Design
+        - Programming
+        - Platform knowledge
+    - Non-Technical
+        - Business processes
+        - Business and enterprise domain
+        - Management
+            - Project management
+            - Problem solving
+            - Negotiation
+            - Facilitation
+        - Leadership
+            - Vision
+            - Self directed
+            - Decisive
+            - Motivational
+            - Inspirational
+            - Confident
+            - Committed
+            - Know how to delegate
+            - Be positive and creative
+- Types of architect
+    - Enterprise Architect (More aligned with business than tech)
+        - Strategic Architect
+            - Concerns:
+                - People
+                    - Build and/or organize a team
+                    - Break solutions into manageable pieces
+                    - Deliverable order
+                - Process
+                    - Develop your own processes
+                    - Create a set of repeatable procedures
+                - Information Flow
+                - Business Processes
+                - Strategic goals
+                - Make sure business and technical strategies align
+                - Roadmaps
+    - Solutions Architect (Technical architect)
+        - Cross Domain
+        - Cross-functional
+        - Systems Interactions
+        - Frameworks
+        - Infrastructure
+        - Interoperability
+        - Horizontal Problems
+            - Roadmaps
+            - Guidance
+        - Cross cutting concerns
+            - Reuse
+            - Process
+            - Guidance
+        - Strategic Solutions
+    - Application Architect (Operational Architect)
+        - Focused on a single application (or vertical)
+        - Single technology (web, desktop or mobile)
+        - Component reuse
+        - Maintainability
+        - Detailed design for their problem domain
+        - Components, Modules, Classes, Libraries, Languages
+        - Reuse with business unit
 - What is an architect expected to do?
     - Technical & Non-Technical
 - Why does an organization need software architects?
