@@ -17,6 +17,26 @@
             - Customers
         - The architect goal here is to collaboratively work with all the groups involved to agree on a design and facilitate the construction of the solution.
 - What is an architect expected to be skilled at?
+    - Technical
+        - Developer
+        - Designer
+        - Modeling
+        - Keep up new techs
+    - Management
+        - Project management
+        - Problem solving
+        - Negotiation
+        - Facilitation
+    - Leadership
+        - Vision
+        - Self directed
+        - Decisive
+        - Motivational
+        - Inspirational
+        - Confident
+        - Committed
+        - Know how to delegate
+        - Be positive and creative
 - What is an architect expected to know?
 - What is an architect expected to do?
     - Technical & Non-Technical
