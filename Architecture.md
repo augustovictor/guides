@@ -1,5 +1,27 @@
 # Software Architecture
 
+### Initial questions
+- Who is a software architect?
+    - Technical expert
+    - Good communicator and listener
+    - Collaborator
+    - Workflow begins with an idea that must be heard and understood. Then Synthesized through communication and collaboration across the organization. And finally trascripted to an architecture along with the stakeholders, based on their needs and goals.
+        - Stakeholders:
+            - Developers
+            - Project management
+            - Quality assurance
+            - Change management
+            - Marketing
+            - Business
+            - Executive
+            - Customers
+        - The architect goal here is to collaboratively work with all the groups involved to agree on a design and facilitate the construction of the solution.
+- What is an architect expected to be skilled at?
+- What is an architect expected to know?
+- What is an architect expected to do?
+    - Technical & Non-Technical
+- Why does an organization need software architects?
+
 ### The three big concerns:
 - Function;
 - Separatioon of components;
