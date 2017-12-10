@@ -88,8 +88,71 @@
         - Components, Modules, Classes, Libraries, Languages
         - Reuse with business unit
 - What is an architect expected to do?
-    - Technical & Non-Technical
+    - Technical
+        - Select which architectural style will be used
+            - Client Server
+            - Message Bus
+            - Service Oriented Architecture
+            - Domain Driven Design
+            - Layered Architecture
+            - Component Based
+        - Which architectural patterns to leverage
+            - MVC
+            - Publish/Subscribe
+            - Peer-to-peer
+        - Choose between purchasing or constructing a solution. It is the architect responsability to guide the enterprise on which path to follow;
+        - Design a solution that solves business problem
+            - Goals:
+                - Solve the problem;
+                - Understanding entire problem;
+                - Creating technical solution;
+            - This design should be technically and organizationally feasible;
+                - Goals:
+                    - Communicating the solution
+                    - Technical and Non-technical stakeholders
+                - Before drawing any solution, understand organizational business and technical tolerances;
+                - Take into account when designing a solution:
+                    - Team experience
+                    - Project duration
+                    - Cost
+                    - Resourcing
+                    - Deployed infrastructure
+                    - Business process
+                    - Technical team processes
+                    - Methodologies
+        - Document the architecture
+        - Evaluate Architecture
+            - Evaluate own architecture and peers architecture
+            - Evaluation aspects:
+                - How well the solution solves the problem;
+                - Address quality attributes;
+                - How it meets the projects and organization goals;
+        
+    - Non-Technical
+        - Identify how a solution will achieve its business goals. This can be identified by:
+            - Project scope and functional requirements;
+            - Discussion with business stakeholders;
+            - Present a high level architecture
+                - This is where the architect interpretation of the business goals is presented;
+            - Divide project into subsystems
+                - Smaller workable chunks
+                - Smaller teams working concurrently
 - Why does an organization need software architects?
+    - To mitigate risk
+    - Most common reasons project fails:
+        - Does not achieve business goals;
+        - Takes too long;
+        - Costs too much;
+    - Architects bring:
+        - Vision, leadership, structure and experience
+    - Project estimates and duration
+        - Feasibility is based on top down estimates;
+        - Duration is based on bottom up estimates;
+    - Define the Need vs. Want with business team;
+    - Reduce time and cost
+        - The architect should identify complex components and along with the business decide whether to keep or eliminate them;
+        - More developers does not always help
+    
 
 ### The three big concerns:
 - Function;
