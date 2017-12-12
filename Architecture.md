@@ -153,6 +153,43 @@
         - The architect should identify complex components and along with the business decide whether to keep or eliminate them;
         - More developers does not always help
     
+### Project phases
+- Initiation
+    - First thing the architect/architects should do is to outline a viable solution;
+        - Identify the most complex pieces of the solution;
+            - Generally the most complex pieces are the ones that will interact with third party systems;
+        - Identify portions that will most greatly impact timeline and cost (Architecturally significant portions of the project);
+    - Project Sizing
+        - Provide a high level cost and resource estimates so the business can decide whether the project is viable;
+        - This is not an actuall estimation, but a general connotation that does not imply commitment;
+        - Create bucket sizes
+            - Small: <5 people / <6 months
+            - Medium: 5-10 people / 3 to 12 months
+            - Large: 25+ / 6-12+ months
+    - Know the stakeholders
+        - Organization leaders
+        - Enterprise architects
+        - Project managers
+        - Business users
+        - Understand their needs and goals
+    - Know what questions to ask
+    - Develop and maintain strong feedback loops
+    - Technical vision document
+        - It describes the overall plan/vision for the solution
+            - It outlines the core requirements in a very high level, based on the key features;
+            - Quality attributes, constraints, goals;
+        
+- Assembling the team
+    - Architects, Senior Developers and Business domain experts;
+    - Purposes:
+        - Create a feedback loop of trusted domain and tech experts;
+    - Let the team participate to the design process;
+        
+- Requirements
+- Design
+- Construction
+- Testing
+- Implementation
 
 ### The three big concerns:
 - Function;
