@@ -224,6 +224,26 @@
                 - Technology
                 - Coding
 - Design
+    - Here is when the architect creates a design that meets the needs of the business;
+    - It is the process that focus on understanding and defining structures taht make up the solution. Whereas Documentation is the process of communicating the solution externally to an audience;
+    - There will be mistakes and the key is making them less expensive to change. It is an iterative process;
+    - Identify the portions of the solution that are most likely to change and design a solution to mitigate these risks;
+        - Risky portions often occur at boundaries;
+        - It is a good idea to develop a high level design with a small group of people and a more detailed one with more experienced developers;
+        - Things to keep in mind when selecting the design team:
+            - This is not a place for junior developers
+        - Design sessions workflow:
+            - Begin with brainstorming;
+            - The team does not have to understand every little aspect of the problem, but the whole problem that is being solved;
+            - Create Views that communicate structures to an audience
+                - Views are representations of the design to a particular audience.
+                    - Some views target business;
+                    - Some views target technical;
+                    - Some views target both;
+                - Each view represents a single perspective of the solution to THAT audience;
+                    - In this case views are windows into your design;
+                    - No single viewpoint represents the entire solution;
+    
 - Construction
 - Testing
 - Implementation
