@@ -186,6 +186,43 @@
     - Let the team participate to the design process;
         
 - Requirements
+    - Functional requirements (What the system shall do (Not how to implement))
+        - Architect plays a supportive role
+        - A good functional requirement describes:
+            - Input
+            - Behavior
+            - Output
+    - Non-functional requirements (What the system shall be)
+        - Identify these requirements first
+        - Architect plays a more active role
+        - This kind of requirements are the ones that impact the architecture;
+        - Some of the non-functional requirements are the cross cutting concerns and quality attributes;
+        - Examples of non-functional requirements (Quality attributes list):
+            - Accessibility
+            - Availability
+            - Configurability
+            - Extensibility
+            - Performance
+            - Maintainability
+            - Scalability
+            - Security
+            - Supportability
+            - Testability
+            - Usability
+        - Questions to ask to find answers on non-functional requirements:
+            - How many users are expexted to use the system initially?
+            - What will this grow to in the future?
+            - What will the business impact be if the system is unavailable?
+        - Identify constraints:
+            - Time
+            - Resource
+            - Budget
+            - Team skills
+            - Deployed infrastructure
+            - Standards
+                - Architectural
+                - Technology
+                - Coding
 - Design
 - Construction
 - Testing
