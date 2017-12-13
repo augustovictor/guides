@@ -264,6 +264,15 @@
     - Performance testing (Architect plays an active role)
         - Make sure there is an environment similar to production;
 - Implementation
+    - Help coordinate deployment;
+    - Work with infra team to decide whether a new infra has to be created or an existing one can be used;
+        - If the deployment will be done to an existing infra, then it should be identified as an architectural constraint;
+    - Make sure health checks and performance monitors are in place;
+    - 3 Main areas of concern
+        - Source code management (Git)
+        - Build management
+        - Deployment
+    - Once the deploy is done, the architect should remain available for troubleshooting if needed;
 
 ### The three big concerns:
 - Function;
