@@ -256,9 +256,13 @@
         - Coding standards;
         - Source code pository;
     - Code review should be an integrap part of the process;
-    
-    
 - Testing
+    - Quality assurance testing (Architect plays a supportive role)
+        - Help testers to understand requirements;
+        - Help to translate requirements into test cases;
+        - Make sure quality assurance environment exists and it is being used;
+    - Performance testing (Architect plays an active role)
+        - Make sure there is an environment similar to production;
 - Implementation
 
 ### The three big concerns:
