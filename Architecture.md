@@ -245,6 +245,19 @@
                     - No single viewpoint represents the entire solution;
     
 - Construction
+    - The architect organize the project into logical segments;
+    - The architect must train the team to get them up to speed;
+    - Stay one step ahead of development effort;
+    - Review functional requirements to make sure assumptions made in the beginning of the project still hold true (Design validation);
+        - If there will be any change the architect must provide technical direction to the team;
+    - The architect should decide with the team:
+        - Unit testing requirements;
+        - Change management practices;
+        - Coding standards;
+        - Source code pository;
+    - Code review should be an integrap part of the process;
+    
+    
 - Testing
 - Implementation
 
