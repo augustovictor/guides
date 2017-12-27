@@ -1,13 +1,16 @@
 # Software Architecture
 
 ### Initial questions
-- What is the software architecture goal?
+- What are the software architecture goals?
     - To minimize the required human resources to develop and maintain a system;
     - To identify structures, their elements, relationships between them, and how thei interact with each other. Properties and behaviors (interactions) must be identified;
         - Elements
         - Relations
         - Properties
         - Behavior
+- What are the architectural design goals?
+    - Separate large problem domains into manageable pieces;
+    - Abstract and encapsulate complexities of the problem at hand;
 - Who is a software architect?
     - Technical expert
     - Good communicator and listener
@@ -293,6 +296,37 @@
 - Architecturally significant design choices are the ones that have wide impact on the solution;
 - Meet non-functional requirements;
 - Guide downstream design activities;
+- Approaches to design and their benefits:
+    - Common goals:
+        - Create a set of common terms that can be used to facilitate communication between stakeholders;
+        - Provide a representation of functional components;
+        - Create a model that facilitates the partitioning of the problem domain;
+    - Top-down (Traditional approach)
+        - Highest level of abstraction, progressively work downward providing more details;
+        - The goal is to break down the system into components with inputs and outputs;
+        - It is performed iteratively as a series of sequential decomposition exercises;
+            - In the end we would have a series of black boxes, interfaces and relationships between them. These are used as basis for implementation choices;
+        - Benefits:
+            - Provides a logical and systematic approach;
+            - Helps to reduce size, scope, complexity of each module, which is benefitial for system partitioning, separation of concerns, and resource alocation;
+            - Works for both functional and object oriented design approaches;
+        - Disadvantages:
+            - Requires an in depth understanding of the problem domain;
+    - Bottom-up
+        - Focus on the components that makeup the solution, working upward to assemble them into a whole. Like assembling lego pieces;
+        - Benefits:
+            - Allow the team to begin coding and testing early;
+            - Since the team only builds what it needs the complexity of the design is reduced;
+            - Promotes code reuse;
+            - Promotes the use of continuous integration and unit testing to maintain quality and identify emergent issues;
+        - Disadvantages:
+            - Can be difficult to maintain;
+    - Some common names are:
+        - Up-front vs evolutionary design;
+        - Decomposition vs composition;
+        - Planned design vs emergent design;
+    - It is possible to use both approaches.
+        - Use the top-down approach during project inception;
 
 
 ### The three big concerns:
