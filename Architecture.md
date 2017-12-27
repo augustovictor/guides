@@ -1,6 +1,13 @@
 # Software Architecture
 
 ### Initial questions
+- What is the software architecture goal?
+    - To minimize the required human resources to develop and maintain a system;
+    - To identify structures, their elements, relationships between them, and how thei interact with each other. Properties and behaviors (interactions) must be identified;
+        - Elements
+        - Relations
+        - Properties
+        - Behavior
 - Who is a software architect?
     - Technical expert
     - Good communicator and listener
@@ -214,6 +221,7 @@
             - What will this grow to in the future?
             - What will the business impact be if the system is unavailable?
         - Identify constraints:
+            - Constraints are put there to guide the team and mitigate risks by providing vision with clear goals;
             - Time
             - Resource
             - Budget
@@ -273,6 +281,19 @@
         - Build management
         - Deployment
     - Once the deploy is done, the architect should remain available for troubleshooting if needed;
+    
+### Detailed design vs Architecture design
+### Architecture design (High level architecture)
+- Focus on the pieces that are difficult and costly to change;
+- Architectural design is performed until it reaches the point where the development team can begin their work;
+- Should rarely change. Since changes on this level are costly and painful;
+
+#### Detailed design (Addresses implementation)
+- Continues long after the architectural design is complete. The design is complete only when the project is delivered;
+- Architecturally significant design choices are the ones that have wide impact on the solution;
+- Meet non-functional requirements;
+- Guide downstream design activities;
+
 
 ### The three big concerns:
 - Function;
@@ -324,3 +345,11 @@ Any program can be constructed just from these three structures:
 
 ### Soft Skills
 - 
+
+## Observations
+- Always have the phase Iteration 0 in your project. This is where architectural design is built;
+- A structure is architectural if it supports reasoning about the system and its properties;
+    - The architecture needs to contain only portions of the system that are architecturally significant;
+        - The architect should not design every single portion of the system. They have to understand the problem area and identify where the solution should fit within the organization;
+        - Design only enough for the team to begin coding or to perform detailed design;
+- Design choices that focus on implementation are non-architectural;
