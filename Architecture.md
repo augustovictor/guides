@@ -311,7 +311,7 @@
             - Made up of one or many subsystems;
         - Subsystem
             - Logical separation of responsability within the system boundary;
-            - Grouping of related elements;
+            - Grouping of related elements that comprise the entirety of your solution;
             - Sometimes can be a sandalone application that is part of the solution;
         - Module
             - Logical separation of responsability
@@ -364,7 +364,7 @@
         - Use the top-down approach during project inception;
         
 #### Architectural Design Process
-- Step 1 - Start with the big picture and know your boundaries:
+- STEP 1 - Start with the big picture and know your boundaries:
     - Considerations (These considerations are important to know what your solution responsabilities are, and how it will function as part of your organization ecosystem):
         - The first level of the architectural design defines your application boundaries and interoperation points with other applications. Both internal and external to the organization;
         - Where does your solution fit into your organization's ecosystem?
@@ -374,6 +374,10 @@
         - Will your application access databases that are not part of your solution?
         - Take note of all systems that your solution will interact with and how they will communicate. Boundaries are an important consideration when designing a solution;
         - Boundaries create context so use that to focus on one problem at a time;
+- STEP 2 - Define subsystems (Inventory of all subsystems, understanding of their responsabilities and how they interact with each other):
+    - Identify subsystems;
+    - If your solution contains many architecture types (Web, Mobile, services...) it is likely subsystems will be partitioned by application type.
+        - If the subsystems interact with each other, and how they communicate.
 
 ### The three big concerns:
 - Function;
