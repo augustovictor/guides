@@ -33,9 +33,9 @@
         - Modeling
         - Keep up new techs
         - Architectural concepts
-            - Architectural patterns
+            - Architectural patterns (Deal with structure and organization of the entire system or subsystems)
             - Architectural styles
-        - Design patterns
+        - Design patterns (Solve problems well understood during construction)
         - Software engineering
         - Software Design
         - Programming
@@ -314,13 +314,14 @@
             - Grouping of related elements that comprise the entirety of your solution;
             - Sometimes can be a sandalone application that is part of the solution;
         - Module
-            - Logical separation of responsability
+            - Dedicated to a single logical area of responsability;
             - Grouping of other modules or components;
             - Responsabilities are easyily understood by team;
         - Component
             - Execution units in our solution;
             - Independently deployable software;
             - Designed to be pluggable;
+            - Should be loosely coupled;
             - Defined by their interfaces and behaviors;
 - Focus on the pieces that are difficult and costly to change;
 - Architectural design is performed until it reaches the point where the development team can begin their work;
@@ -363,7 +364,16 @@
     - It is possible to use both approaches.
         - Use the top-down approach during project inception;
         
-#### Architectural Design Process
+#### Architectural Design Process - HLA (High Level Architecture)
+- Defines:
+    - System boundaries
+    - External interoperation points
+    - Subsystems
+    - Subsystems types
+    - Subsystems interoperation points
+    - Modules
+    - Responsabilities
+- The HLA will be used to validate, set constraints and provide structure to the remaining design steps;
 - STEP 1 - Start with the big picture and know your boundaries:
     - Considerations (These considerations are important to know what your solution responsabilities are, and how it will function as part of your organization ecosystem):
         - The first level of the architectural design defines your application boundaries and interoperation points with other applications. Both internal and external to the organization;
@@ -374,10 +384,16 @@
         - Will your application access databases that are not part of your solution?
         - Take note of all systems that your solution will interact with and how they will communicate. Boundaries are an important consideration when designing a solution;
         - Boundaries create context so use that to focus on one problem at a time;
-- STEP 2 - Define subsystems (Inventory of all subsystems, understanding of their responsabilities and how they interact with each other):
+- STEP 2 - Define subsystems (Inventory of all subsystems, understanding of their responsabilities and how they interact with each other or an external system):
     - Identify subsystems;
     - If your solution contains many architecture types (Web, Mobile, services...) it is likely subsystems will be partitioned by application type.
         - If the subsystems interact with each other, and how they communicate.
+- STEP 3 - Identify all modules that make up each subsystem
+    - Modules will be defined for every subsystem proceeding horizontally from one subsystem to the next;
+    - Interoperation between modules is important but we should stay within the boundaries of the subsystem;
+- STEP 4 - Define components
+    - Define components that make up or map each module;
+    - Lower levels of design should be performed by development team;
 
 ### The three big concerns:
 - Function;
@@ -437,3 +453,5 @@ Any program can be constructed just from these three structures:
         - The architect should not design every single portion of the system. They have to understand the problem area and identify where the solution should fit within the organization;
         - Design only enough for the team to begin coding or to perform detailed design;
 - Design choices that focus on implementation are non-architectural;
+- Create prototypes for validating design concepts. It is often a tool for the more risky and lesser understood parts of the solution;
+- Always set time constraints;
