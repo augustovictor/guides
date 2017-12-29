@@ -395,6 +395,61 @@
     - Define components that make up or map each module;
     - Lower levels of design should be performed by development team;
 
+#### Communicating the design to stakeholders (Technical and Non-Technical)
+- Design and documentation are distinct processes with different goals;
+    - Design identifies all the structures that make up the solution;
+    - Documentation communicates design structures;
+- Artifacts are representations of the architecture. They are created to communicate information to a particular audience;
+- The size of the team will determine the number of details needed for each document;
+- On small teams creating lots of design documents will not provide as much value as in large teams;
+    - Small: up to 5;
+    - Large: More than 5;
+- Time spent in documenting pales in comparison to time spent:
+    - Communicating the design;
+    - Educating new team members;
+    - Justifyiing and explaining design decisions;
+- Artifacts can do this for you. It scales as your team grows;
+- Main objectives for creating architectural artifacts:
+    - OBJECTIVE 1: Facilitate communication between stakeholders
+        - Communicate what is being built;
+        - How functional and quality related requirements are being achieved;
+        - Communicate system constraints;
+        - These blueprints serve as the interface between the technical and non-technical stakeholders;
+        - Define the structures from top-down and bottom-up;
+        - Define the terms upon which the team will communicate;
+    - OBJECTIVE 2: Basis for detailed design and construction efforts;
+        - Provide the foundation upon which non-architectural, more detailed designs and construction will be built;
+        - Architectural artifacts should provide guidance, structure and constraints that leads the team to meet the business goals;
+    - OBJECTIVE 3: Educate the team, both business and technical
+        - Facilitate duscussions;
+        - Provide background;
+        - Explain choices;
+        - Document decisions;
+        - Provide context and abstraction;
+    - How do we know we are meeting these objectives?
+        - Ask these two questions everytime you're creating an artifact:
+            - Does this document provide value in at least one of the areas identified as objectives?
+            - Does this level of detail communicate enough?
+                - Is there enough detail for our business users to understand how we are meeting their needs?
+                - Is there enough detail for our dev team to build a solution?
+
+#### Documentation Standards
+- Focus on diagrams;
+- Types of diagrams:
+    - Formal: UML
+        - There are 14 types of UML diagrams which are divided into 2 categories:
+            - Structural: Structures that make up the application;
+            - Behavioral: Behavior and functionality;
+                - Interaction: Represent the control flow between components;
+    - Informal
+        - Consists in boxes and lines that represent elements, relations and behavior;
+    - Hybrid
+        - Use of UML diagrams in conjunction with box and lines diagrams;
+- Martin Fowler - 3 modes of UML diagrams
+    - Sketch (Most common) - Does not necessarily conform to all the rules of UML. It focuses more on communicating concepts and ideas;
+    - Blueprints (More formal);
+    - Programming Language
+
 ### The three big concerns:
 - Function;
 - Separatioon of components;
