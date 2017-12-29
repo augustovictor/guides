@@ -286,7 +286,42 @@
     - Once the deploy is done, the architect should remain available for troubleshooting if needed;
     
 ### Detailed design vs Architecture design
+- Design considerations:
+    - What are the goals and objectives of your architecture?
+    - What style of application will best meet your needs? Mobile, web, service oriented?
+    - What are the architectural significant requirements that should be considered? And how does this design account for them?
+    - What are the important system, run-time, design and user quality attributes of the solution? And how these addresses in your architecture?
+    - Do any of these attributes have competing goals?
+    - Which attributes are more important and what are the tradeoffs that should be considered?
+    - What are the technical concerns of the solution?
+    - Have you accounted for cross cutting concerns?
+    - Will you utilize existing frameworks or create one as part of your project?
+    - What patterns should be considered?
+    - Have you considered technology, team, deployment and time constraints?
+    - Are there alternative architecutres that should be considered?
+    
 ### Architecture design (High level architecture)
+- Is Iterative, layered and begins by defining the highest level of detail;
+- Make everyone speak the same language;
+- Define common set of terms;
+    - Each term defines an element and a hierarchy;
+    - Example of terms:
+        - System
+            - Highest level of detail and defines the entire scope of the project;
+            - Made up of one or many subsystems;
+        - Subsystem
+            - Logical separation of responsability within the system boundary;
+            - Grouping of related elements;
+            - Sometimes can be a sandalone application that is part of the solution;
+        - Module
+            - Logical separation of responsability
+            - Grouping of other modules or components;
+            - Responsabilities are easyily understood by team;
+        - Component
+            - Execution units in our solution;
+            - Independently deployable software;
+            - Designed to be pluggable;
+            - Defined by their interfaces and behaviors;
 - Focus on the pieces that are difficult and costly to change;
 - Architectural design is performed until it reaches the point where the development team can begin their work;
 - Should rarely change. Since changes on this level are costly and painful;
@@ -327,7 +362,18 @@
         - Planned design vs emergent design;
     - It is possible to use both approaches.
         - Use the top-down approach during project inception;
-
+        
+#### Architectural Design Process
+- Step 1 - Start with the big picture and know your boundaries:
+    - Considerations (These considerations are important to know what your solution responsabilities are, and how it will function as part of your organization ecosystem):
+        - The first level of the architectural design defines your application boundaries and interoperation points with other applications. Both internal and external to the organization;
+        - Where does your solution fit into your organization's ecosystem?
+        - Will this solution interoperate with other systems withing your organization or will it be a standalone application that provides one simple function?
+        - Will other applications use the database you're creating?
+        - Will your application provide or consume any services?
+        - Will your application access databases that are not part of your solution?
+        - Take note of all systems that your solution will interact with and how they will communicate. Boundaries are an important consideration when designing a solution;
+        - Boundaries create context so use that to focus on one problem at a time;
 
 ### The three big concerns:
 - Function;
