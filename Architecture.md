@@ -450,6 +450,58 @@
     - Blueprints (More formal);
     - Programming Language
 
+#### What are views?
+- Is a view into the architecture that has a single viewpoint targeted to a particular audience and addresses a specific set of concerns;
+- Approaches
+    - 4+1 architectural view model (5 views. Each address a separate set of concerns and audience):
+        - Logical: End user functionality viewpoint (Class diagram)
+            - Structures of the architecture that implement functional requirements;
+            - Classes and their relationships;
+        - Development (Package and component diagram)
+            - Structure and organizational viewpoint
+            - How modules are organized and how they interact;
+        - Process (Activity diagram)
+            - Run-time viewpoint
+            - Performance
+            - Reliability
+            - Scalability
+            - Interaction and communication
+        - Phisical or deployment (Deployment diagram)
+            - Infrastructure viewpoint
+            - Where the solution will be deployed;
+            - Communication between phisical tiers;
+        - Use case (Scenario): Ties all views together (Use case diagram)
+            - User requirements;
+            - System functionallity;
+            - Internal and external actors;
+    - Views & Beyond (3 view categories) (2nd edition)
+        - Module (Structural view of the architecture)
+            - Addresses how modules are organized and how they interact with each other;
+            - Provides a blueprint of the system that are often represented by decomposition diagrams;
+            - Show dependencies between modules and the layers within a module;
+            - Styles used when creating module views (Can be combined):
+                - Decomposition
+                - Uses
+                - Generalization
+                - Layered
+                - Aspects
+                - Data model
+        - Component & connector (Behavioral view of the architecture)
+            - Addresses how the elements of the system work together at run-time;
+            - How they meet performance, reliability and availability quality attributes
+            - Styles used when creating component & connector views:
+                - Data flow
+                - Call-return
+                - Event-based
+                - Repository
+        - Allocation (Development, deployment and execution views of the architecture)
+            - Addresses how the elements of the system are allocated to infrastructure and work teams;
+            - Map elements to hardware and work teams;
+            - Styles used when creating allocation views:
+                - Deployment
+                - Install
+                - Work assignment
+
 ### The three big concerns:
 - Function;
 - Separatioon of components;
