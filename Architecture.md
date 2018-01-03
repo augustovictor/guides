@@ -363,6 +363,7 @@
         - Planned design vs emergent design;
     - It is possible to use both approaches.
         - Use the top-down approach during project inception;
+    
         
 #### Architectural Design Process - HLA (High Level Architecture)
 - Defines:
@@ -562,3 +563,15 @@ Any program can be constructed just from these three structures:
 - Design choices that focus on implementation are non-architectural;
 - Create prototypes for validating design concepts. It is often a tool for the more risky and lesser understood parts of the solution;
 - Always set time constraints;
+- An ideal design is attained not when there is no longer anything to add, but when there is no longer anything to take away.
+- All approaches to design include 3 aspects that may be compared:
+    - Design method - Systematic series of steps that the team uses to solve a problem; A sugestion of how to view the problem;
+        - Object oriented design
+        - Structured design
+        - Role based design
+    - Design representation
+    - How that design is going to be validated;
+
+## Books
+- Software Architecture in Practice (3rd Edition)
+- Documenting Software Architectures: Views and Beyond (2nd Edition)
